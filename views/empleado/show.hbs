@@ -1,35 +1,40 @@
 <div class="container">
     <h3><a href="/empleados">Lista de empleados</a></h3>
     <h1>Detalle de Empleado</h1>
-    <table>
+    <table class="table">
+    <thead>
+            <tr>
+            <th scope="col">Atributo</th>
+            <th scope="col">Valor</th>
+            </tr>
+        </thead>
         <tbody>
             <tr>
-                <td>Nombre</td>
-                <td>{{ empleado.nombre }}</td>
+            <td>Nombre</td>
+            <td>{{ empleado.nombre }}</td>
             </tr>
             <tr>
-                <td>Email</td>
-                <td>{{ empleado.email }}</td>
+            <td>Email</td>
+            <td>{{ empleado.email }}</td>
             </tr>
             <tr>
-                <td>DNI</td>
-                <td>{{ empleado.dni }}</td>
+            <td>DNI</td>
+            <td>{{ empleado.dni }}</td>
             </tr>
             <tr>
-                <td>Sexo</td>
-                <td>{{ empleado.sexo }}</td>
+            <td>Sexo</td>
+            <td>{{ empleado.sexo }}</td>
             </tr>
             <tr>
-                <td>Telefono</td>
-                <td>{{ empleado.telefono }}</td>
+            <td>Telefono</td>
+            <td>{{ empleado.stelefono }}</td>
             </tr>
         </tbody>
     </table>
-
-    <h3><a href="/empleados/edit/{{ empleado._id }}"> EDIT</h3>
+    <a class="btn btn-primary mb-2" href="/empleados/edit/{{ empleado._id }}" role="button">Edit</a>
     
     <form action="/empleados/delete/{{ empleado._id }}" method="POST">
-        <button type="submit">DELETE</button>
+        <button class="btn btn-primary" type="submit">Delete</button>
     </form>
 
 </div>
